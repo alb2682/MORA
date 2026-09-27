@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORA | Akademik Takip Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- GİRİŞ -->
+    <div id="loginPage" class="page">
+
+        <div class="login-card">
+
+            <div class="logo">M</div>
+
+            <h1>MORA</h1>
+            <p>9. Sınıf Akademik Takip Sistemi</p>
+
+            <div class="role-buttons">
+
+                <button onclick="selectRole('teacher')" id="teacherRole">
+                    👨‍🏫
+                    <strong>Öğretmen</strong>
+                    <small>Yönetim</small>
+                </button>
+
+                <button onclick="selectRole('student')" id="studentRole">
+                    👨‍🎓
+                    <strong>Öğrenci</strong>
+                    <small>Öğrenci Paneli</small>
+                </button>
+
+                <button onclick="selectRole('parent')" id="parentRole">
+                    👨‍👩‍👦
+                    <strong>Veli</strong>
+                    <small>Takip</small>
+                </button>
+
+            </div>
+
+            <input id="username" type="text" placeholder="Kullanıcı adı">
+            <input id="password" type="password" placeholder="Şifre">
+
+            <button class="login-button" onclick="login()">
+                MORA'ya Giriş Yap →
+            </button>
+
+            <span class="demo">
+                Demo: öğretmen / 1234
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- UYGULAMA -->
+    <div id="appPage" class="hidden">
+
+        <aside>
+
+            <div class="brand">
+                <div class="brand-logo">M</div>
+
+                <div>
+                    <strong>MORA</strong>
+                    <small>2026–2027</small>
+                </div>
+            </div>
+
+            <div id="accountType" class="account-type">
+                👨‍🏫 ÖĞRETMEN
+            </div>
+
+            <nav id="menu"></nav>
+
+            <div class="system-status">
+                ● MORA aktif
+            </div>
+
+        </aside>
+
+
+        <main>
+
+            <header>
+
+                <div>
+                    <small id="pageCategory">ANA PANEL</small>
+                    <h2 id="pageTitle">Hoş geldiniz 👋</h2>
+                </div>
+
+                <button onclick="logout()" class="logout">
+                    Çıkış
+                </button>
+
+            </header>
+
+            <section id="content"></section>
+
+        </main>
+
+    </div>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
